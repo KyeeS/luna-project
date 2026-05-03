@@ -1,0 +1,16 @@
+# vscode
+.vscode/
+.vscode/*
+
+# log files
+*.log
+logs/
+logs/*
+
+# dump files
+*.dmp
+gamemodes/*.amx
+
+# mysql credentials
+mysql.ini
+
