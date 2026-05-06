@@ -5,7 +5,6 @@
 
 #define RP_NAME_REGEX					"^(?=.{7,24}$)[A-Z][a-z]+_[A-Z][a-z]+$"
 
-native SendClientMessage_s(playerid, colour, AmxString:msg) = SendClientMessage;
 native GetPlayerName_s(playerid, AmxString:name, len) = GetPlayerName;
 native SetPlayerName_s(playerid, AmxString:name) = SetPlayerName;
 
@@ -80,9 +79,9 @@ stock ShowServerIconForPlayer(playerid)
 	return 1;
 }
 
-stock ClearPlayerChat(playerid)
+stock ClearPlayerChat(playerid, lines = 75)
 {
-	for(new i; i < 75; i ++) {
+	for(new i; i < lines; i ++) {
 		SendClientMessage(playerid, -1, " ");
 	}
 }

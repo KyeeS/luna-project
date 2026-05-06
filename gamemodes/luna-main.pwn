@@ -16,7 +16,6 @@
 #include <chrono>
 #include <humanize>
 
-
 #define SERVER_NAME 	"Luna Project | Development"
 #define SERVER_VERSION	"LN:Beta"
 #define SERVER_LANG		"EN/ID"
@@ -31,16 +30,16 @@
 #include "Core/ORM"
 #include "Core/Colour.inc"
 
+
 #include "Visual/TextDraw.inc"
 #include "Visual/Maps/Header.inc"
-
+#include "Visual/Chat.inc"
 
 #include "Helper/Players"
 #include "Helper/Notification"
 #include "System/Character"
 #include "System/Login"
 #include "System/Saving"
-
 #include "Commands/Players"
 
 #include "Core\Update"
