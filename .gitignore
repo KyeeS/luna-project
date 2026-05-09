@@ -7,9 +7,10 @@
 logs/
 logs/*
 
-# dump files
+# 
 *.dmp
 gamemodes/*.amx
+database/*.bak
 
 # mysql credentials
 mysql.ini

@@ -28,12 +28,12 @@
 #include "Core/Mysql"
 #include "Core/Enum"
 #include "Core/ORM"
-#include "Core/Colour.inc"
+#include "Core/Colour"
 
-
-#include "Visual/TextDraw.inc"
-#include "Visual/Maps/Header.inc"
-#include "Visual/Chat.inc"
+#include "Visual/TextDraw"
+#include "Visual/Needs"
+#include "Visual/Maps/Header"
+#include "Visual/Chat"
 
 #include "Helper/Players"
 #include "Helper/Notification"
@@ -83,6 +83,7 @@ public OnGameModeInit()
 public OnPlayerConnect(playerid)
 {
 	LoadRemoveBuilding(playerid);
+	LoadPlayerTextDraw(playerid);
 	VerifyPlayerLogin(playerid);
 	return 1;
 }	
@@ -90,6 +91,7 @@ public OnPlayerConnect(playerid)
 public OnPlayerSpawn(playerid)
 {
 	ShowServerIconForPlayer(playerid);
+	TogglePlayerHBE(playerid, true);
 	return 1;
 }
 
@@ -118,6 +120,7 @@ public OnPlayerDataLoaded(playerid)
 
 	LunaPlayer[playerid][UpdateTimer] = SetTimerEx("OnPerPlayerUpdate", 500, true, "d", playerid);
 	ShowGreetings(playerid);
+	TogglePlayerHBE(playerid, true);
     SpawnPlayer(playerid);
 }
 

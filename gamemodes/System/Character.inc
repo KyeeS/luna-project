@@ -321,6 +321,8 @@ public OnPlayerCreateCharacter(playerid)
         0.0
     );
 	LunaPlayer[playerid][UpdateTimer] = SetTimerEx("OnPerPlayerUpdate", 500, true, "d", playerid);
+    SetPlayerHBE(playerid, 100.0, PLAYER_HUNGER);
+    SetPlayerHBE(playerid, 100.0, PLAYER_THIRSTY);
     SpawnPlayer(playerid);
     return 1;
 }

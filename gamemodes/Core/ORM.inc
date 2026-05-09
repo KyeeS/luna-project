@@ -3,6 +3,8 @@ stock ORM:LoadPlayerORM(playerid, bool:load = true)
 	new ORM:orm = orm_create("characters", lunaSQL);
 	orm_addvar_int(orm, LunaPlayer[playerid][ID], "ID");
 	orm_addvar_int(orm, LunaPlayer[playerid][Cash], "Cash");
+	orm_addvar_float(orm, LunaPlayer[playerid][Hunger], "Hunger");
+	orm_addvar_float(orm, LunaPlayer[playerid][Thirsty], "Thirsty");
 	orm_addvar_int(orm, LunaPlayer[playerid][Level], "Level");
 	orm_addvar_int(orm, _:LunaPlayer[playerid][TimePlayed], "TimePlayed");
 	orm_addvar_int(orm, LunaPlayer[playerid][LevelPoint], "LevelPoint");
