@@ -16,7 +16,6 @@ enum e_PLAYER_DATA
 	Cash,
 	BankAccount,
 	BankMoney,
-	UpdateTimer,
 	Float:Hunger,
 	Float:Thirsty,
 	ORM:PlayerORM,

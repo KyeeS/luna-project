@@ -82,7 +82,7 @@ public OnGameModeInit()
 
 public OnPlayerConnect(playerid)
 {
-	LoadRemoveBuilding(playerid);
+	RemoveMapBuilding(playerid);
 	LoadPlayerTextDraw(playerid);
 	VerifyPlayerLogin(playerid);
 	return 1;
@@ -118,7 +118,6 @@ public OnPlayerDataLoaded(playerid)
 		LunaPlayer[playerid][PZ], LunaPlayer[playerid][PA]	
     );
 
-	LunaPlayer[playerid][UpdateTimer] = SetTimerEx("OnPerPlayerUpdate", 500, true, "d", playerid);
 	ShowGreetings(playerid);
 	TogglePlayerHBE(playerid, true);
     SpawnPlayer(playerid);
@@ -141,5 +140,17 @@ public OnQueryError(errorid, const error[], const callback[], const query[], MyS
 public pp_on_error(source[], message[], error_level:level, &retval)
 {
 	LunaPrint(source, str_new(message), PrintLevel:level);
+	return 1;
+}
+
+CMD:go(playerid, const params[])
+{
+	new
+		Float:x,
+		Float:y,
+		Float:z
+	;
+	sscanf(params, "fff", x,y,z);
+	SetPlayerPos(playerid, x,y,z);
 	return 1;
 }

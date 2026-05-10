@@ -311,16 +311,15 @@ public OnPlayerCreateCharacter(playerid)
     LunaPlayer[playerid][ID] = cache_insert_id();
     LunaPlayer[playerid][PlayerORM] = LoadPlayerORM(playerid, .load = false); // untuk fix 'invalid orm id'
     ClearPlayerChat(playerid);
-    NotifyShow(playerid, .message = "Berhasil membuat karakter");
+    NotifyShow(playerid, .message = "Berhasil mendaftarkan karakter.");
     SetPlayerName_s(playerid, LunaPlayer[playerid][Name]);
     SetPlayerColor(playerid, -1);
     SetSpawnInfo(
         playerid, NO_TEAM, 
         LunaPlayer[playerid][Skin], 
-        0.0, 0.0, 0.5, 
-        0.0
+        -1964.7767,143.5651,27.6875, 
+        88.4995
     );
-	LunaPlayer[playerid][UpdateTimer] = SetTimerEx("OnPerPlayerUpdate", 500, true, "d", playerid);
     SetPlayerHBE(playerid, 100.0, PLAYER_HUNGER);
     SetPlayerHBE(playerid, 100.0, PLAYER_THIRSTY);
     SpawnPlayer(playerid);

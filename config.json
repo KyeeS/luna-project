@@ -87,7 +87,7 @@
         "public_addr": "",
         "stream_radius": 200.0,
         "stream_rate": 1000,
-        "time_sync_rate": 30000,
+        "time_sync_rate": 600000,
         "use_lan_mode": false,
         "use_omp_encryption": true
     },

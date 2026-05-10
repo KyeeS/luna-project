@@ -27,10 +27,6 @@ stock ClearPlayerData(playerid)
         str_release(LunaPlayer[playerid][Name]);
         str_release(LunaPlayer[playerid][Password]);
     }
-
-    if(IsValidTimer(LunaPlayer[playerid][UpdateTimer])) 
-        KillTimer(LunaPlayer[playerid][UpdateTimer]);
-
     static const empty[e_PLAYER_DATA];
     LunaPlayer[playerid] = empty;
     LunaPrint("ClearPlayerData", 

@@ -7,10 +7,3 @@
 
 forward OnServerUpdate();
 forward OnPerPlayerUpdate(playerid);
-
-public OnPerPlayerUpdate(playerid)
-{
-    LunaPlayer[playerid][TimePlayed] = Now();
-    return 1;
-}
-

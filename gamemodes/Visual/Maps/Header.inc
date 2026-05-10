@@ -1,10 +1,13 @@
-stock LoadRemoveBuilding(playerid)
+#include "Visual/Maps/Maps_RegSpawn"
+
+stock RemoveMapBuilding(playerid)
 {
-	#pragma unused playerid
+	RemoveBuilding_RegSpawn(playerid);
 	return 1;
 }
 
 stock LoadMapBuilding()
 {
+	LoadBuilding_RegSpawn();
 	return 1;
 }
