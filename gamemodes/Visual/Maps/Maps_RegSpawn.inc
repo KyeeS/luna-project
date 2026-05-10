@@ -105,7 +105,7 @@ stock LoadBuilding_RegSpawn()
 	SetDynamicObjectMaterial(tmpobjid, 0, 4830, "airport2", "bevflower2", 0x00000000);
 	tmpobjid = CreateDynamicObject(19482, -1969.994628, 162.958847, 31.827503, 0.000000, 0.000000, -89.600013, -1, -1, -1, 300.00, 300.00);
 	SetDynamicObjectMaterial(tmpobjid, 0, 3603, "bevmans01_la", "sjmlahus29", 0xFF66FFFF);
-	SetDynamicObjectMaterialText(tmpobjid, 0, "{ffffff} Welcome", 120, "Engravers MT", 110, 1, 0x00000000, 0x00000000, 1);
+	SetDynamicObjectMaterialText(tmpobjid, 0, "{ffffff}Luna", 120, "Engravers MT", 110, 1, 0x00000000, 0x00000000, 1);
 	tmpobjid = CreateDynamicObject(19449, -1969.963378, 163.061904, 32.057498, 0.000000, 0.000000, 90.199974, -1, -1, -1, 300.00, 300.00);
 	SetDynamicObjectMaterial(tmpobjid, 0, 10806, "airfence_sfse", "ws_oldpainted", 0xFF33CC99);
 	tmpobjid = CreateDynamicObject(19449, -1969.963378, 163.071899, 31.257492, 0.000000, 0.000000, 90.199974, -1, -1, -1, 300.00, 300.00);

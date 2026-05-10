@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 10, 2026 at 04:29 AM
+-- Generation Time: May 09, 2026 at 01:49 AM
 -- Server version: 5.7.39
 -- PHP Version: 8.3.16
 
@@ -47,8 +47,8 @@ CREATE TABLE `characters` (
   `BirthDay` tinyint(3) UNSIGNED NOT NULL,
   `BirthMonth` tinyint(3) UNSIGNED NOT NULL,
   `BirthYear` smallint(5) UNSIGNED NOT NULL,
-  `Hunger` float NOT NULL DEFAULT '0',
-  `Thirsty` float NOT NULL DEFAULT '0'
+  `Hunger` float NOT NULL,
+  `Thirsty` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
